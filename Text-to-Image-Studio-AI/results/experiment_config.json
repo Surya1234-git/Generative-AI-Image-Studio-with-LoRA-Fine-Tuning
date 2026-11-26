@@ -1,0 +1,115 @@
+[
+  {
+    "id": 10,
+    "name": "my_style vs base",
+    "kind": "lora_compare",
+    "config": {
+      "adapter": "my_style",
+      "scale": 1.0,
+      "seed": 42,
+      "prompt": "A portrait of a cat, detailed"
+    }
+  },
+  {
+    "id": 9,
+    "name": "my_style vs base",
+    "kind": "lora_compare",
+    "config": {
+      "adapter": "my_style",
+      "scale": 1.0,
+      "seed": 42,
+      "prompt": "A portrait of a cat, detailed"
+    }
+  },
+  {
+    "id": 8,
+    "name": "my_style vs base",
+    "kind": "lora_compare",
+    "config": {
+      "adapter": "my_style",
+      "scale": 1.0,
+      "seed": 42,
+      "prompt": "A portrait of a cat, detailed"
+    }
+  },
+  {
+    "id": 7,
+    "name": "my_style vs base",
+    "kind": "lora_compare",
+    "config": {
+      "adapter": "my_style",
+      "scale": 1.0,
+      "seed": 42,
+      "prompt": "A portrait of a cat, detailed"
+    }
+  },
+  {
+    "id": 6,
+    "name": "my_style vs base",
+    "kind": "lora_compare",
+    "config": {
+      "adapter": "my_style",
+      "scale": 1.0,
+      "seed": 42,
+      "prompt": "A photo of a lion standing on the top of the mountain seeing a deer comming to his cave"
+    }
+  },
+  {
+    "id": 5,
+    "name": "FID \u00b7 shapes_dataset",
+    "kind": "fid",
+    "config": {
+      "dataset": "shapes_dataset",
+      "types": [
+        "gan:CGAN"
+      ]
+    }
+  },
+  {
+    "id": 4,
+    "name": "FID \u00b7 shapes_dataset",
+    "kind": "fid",
+    "config": {
+      "dataset": "shapes_dataset",
+      "types": [
+        "gan:Attention CGAN"
+      ]
+    }
+  },
+  {
+    "id": 3,
+    "name": "attn_1125_1314 (Attention CGAN)",
+    "kind": "gan_classifier_eval",
+    "config": {
+      "run": "attn_1125_1314",
+      "dataset": "shapes_dataset",
+      "per_class": 50,
+      "seed": 0,
+      "cond": "label",
+      "epochs": 200
+    }
+  },
+  {
+    "id": 2,
+    "name": "cgan_1125_1304 (CGAN)",
+    "kind": "gan_classifier_eval",
+    "config": {
+      "run": "cgan_1125_1304",
+      "dataset": "shapes_dataset",
+      "per_class": 50,
+      "seed": 0,
+      "cond": "label",
+      "epochs": 200
+    }
+  },
+  {
+    "id": 1,
+    "name": "Reference classifier \u00b7 shapes_dataset",
+    "kind": "classifier",
+    "config": {
+      "dataset": "shapes_dataset",
+      "img_size": 32,
+      "epochs": 8
+    }
+  }
+]

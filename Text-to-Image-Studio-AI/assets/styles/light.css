@@ -1,0 +1,11 @@
+:root{--bg:#f6f4ff;--bg2:#ffffff;--card:rgba(255,255,255,.92);--line:rgba(109,40,217,.22);--text:#1d1540;--muted:#5b5584}
+.stApp{background:radial-gradient(1000px 500px at 90% -10%,rgba(167,139,250,.35),transparent 60%),#f6f4ff;color:#1d1540}
+section[data-testid="stSidebar"]{background:linear-gradient(180deg,#ffffff,#efeaff)}
+.brand .name,.page-title,.panel-title,.tile .v,.mod-card b,.side-card b{color:#1d1540}
+section[data-testid="stSidebar"] .stButton>button{color:#1d1540}
+section[data-testid="stSidebar"] .stButton>button[kind="primary"]{color:#fff}
+.stMarkdown,.stMarkdown p,label,p,span,li,h1,h2,h3,h4{color:#1d1540}
+.stTextArea textarea,.stTextInput input,.stNumberInput input,div[data-baseweb="select"]>div{background:#fff!important;color:#1d1540!important}
+.stButton>button,.stDownloadButton>button{background:#fff;color:#1d1540}
+.tile,div[data-testid="stMetric"]{background:#fff}.mod-card{background:linear-gradient(135deg,#ede9fe,#fff)}
+.hero p,.hero .ticks span{color:#ede9fe}.hero h1{color:#fff}

@@ -1,0 +1,11 @@
+id,kind,name,created_at,clip_base,clip_lora,fid,n_real,n_fake,reliable,accuracy,macro_auc,real_accuracy,n,architecture,real_macro_auc
+10,lora_compare,my_style vs base,2026-11-25T13:50:04,31.952930450439453,31.79960823059082,,,,,,,,,,
+9,lora_compare,my_style vs base,2026-11-25T13:48:54,31.955238342285156,32.155574798583984,,,,,,,,,,
+8,lora_compare,my_style vs base,2026-11-25T13:47:41,31.82101821899414,31.827207565307617,,,,,,,,,,
+7,lora_compare,my_style vs base,2026-11-25T13:46:35,31.902944564819336,31.869041442871094,,,,,,,,,,
+6,lora_compare,my_style vs base,2026-11-25T13:45:39,30.655855178833008,30.53799057006836,,,,,,,,,,
+5,fid,FID · shapes_dataset,2026-11-25T13:32:06,,,327.73779296875,600.0,144.0,False,,,,,,
+4,fid,FID · shapes_dataset,2026-11-25T13:31:45,,,306.9162902832031,600.0,192.0,False,,,,,,
+3,gan_classifier_eval,attn_1125_1314 (Attention CGAN),2026-11-25T13:24:17,,,,,,,1.0,1.0,0.9777777777777777,150.0,Attention CGAN,
+2,gan_classifier_eval,cgan_1125_1304 (CGAN),2026-11-25T13:24:17,,,,,,,0.6666666666666666,0.8333333333333334,0.9777777777777777,150.0,CGAN,
+1,classifier,Reference classifier · shapes_dataset,2026-11-25T13:23:23,,,,,,,,,0.9777777777777777,,,1.0

@@ -1,0 +1,29 @@
+# Core ML stack. On Colab torch/torchvision are preinstalled; locally install the CUDA build you need first:
+#   pip install torch torchvision --index-url https://download.pytorch.org/whl/cu121
+torch>=2.2
+torchvision>=0.17
+diffusers>=0.30
+transformers>=4.44
+accelerate>=0.33
+peft>=0.12
+safetensors>=0.4
+huggingface_hub>=0.24
+sentence-transformers>=3.0
+
+# App and data
+# Pinned below 1.50: the UI uses use_container_width, which newer Streamlit releases deprecate/remove.
+streamlit>=1.45,<1.50
+plotly>=5.20
+numpy>=1.26
+pandas>=2.0
+Pillow>=10.0
+scikit-learn>=1.3
+scikit-image>=0.22
+scipy>=1.11
+matplotlib>=3.8
+umap-learn>=0.5.5
+reportlab>=4.0
+
+# Metrics (FID, LPIPS)
+torchmetrics[image]>=1.3
+lpips>=0.1.4

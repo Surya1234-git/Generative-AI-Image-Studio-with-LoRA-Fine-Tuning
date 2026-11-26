@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+:root{--accent:#8b5cf6;--accent2:#c026d3;--bg:#0a0620;--bg2:#120a33;--card:rgba(24,14,62,.78);--line:rgba(139,92,246,.28);--text:#ece8ff;--muted:#a79fcf;--ok:#34d399;--warn:#fbbf24;--err:#f87171}
+html,body,.stApp,[class*="css"]{font-family:'Plus Jakarta Sans',system-ui,sans-serif!important}
+.stApp{background:radial-gradient(1200px 600px at 80% -10%,rgba(124,58,237,.28),transparent 60%),radial-gradient(900px 500px at 0% 100%,rgba(192,38,211,.16),transparent 60%),var(--bg);color:var(--text)}
+header[data-testid="stHeader"]{background:transparent;height:0}
+.block-container{padding:1.1rem 1.6rem 3rem;max-width:1500px}
+/* sidebar */
+section[data-testid="stSidebar"]{background:linear-gradient(180deg,#0d0730 0%,#08041f 100%);border-right:1px solid var(--line);min-width:260px!important}
+section[data-testid="stSidebar"] .block-container{padding-top:1rem}
+.brand{padding:.4rem .4rem 1rem}
+.brand .logo{font-size:1.9rem;line-height:1;color:var(--accent)}
+.brand .name{font-weight:800;font-size:1.45rem;line-height:1.15;margin-top:.35rem;color:#fff}
+.brand .ver{font-size:.68rem;font-weight:700;background:linear-gradient(90deg,var(--accent),var(--accent2));padding:.12rem .5rem;border-radius:99px;margin-left:.35rem;vertical-align:middle}
+.brand .tag{font-style:italic;color:var(--muted);font-size:.82rem;margin-top:.25rem}
+section[data-testid="stSidebar"] .stButton>button{justify-content:flex-start;width:100%;border:none;background:transparent;color:var(--text);font-weight:600;padding:.62rem .9rem;border-radius:12px;box-shadow:none}
+section[data-testid="stSidebar"] .stButton>button:hover{background:rgba(139,92,246,.16);color:#fff}
+section[data-testid="stSidebar"] .stButton>button[kind="primary"]{background:linear-gradient(90deg,#6d4aff,#9b5cf6);color:#fff;box-shadow:0 6px 22px rgba(124,58,237,.45)}
+.side-card{margin-top:1rem;padding:1rem;border:1px solid var(--line);border-radius:16px;background:linear-gradient(160deg,rgba(124,58,237,.22),rgba(17,8,48,.8));text-align:center}
+.side-card b{display:block;font-size:1.05rem;color:#fff}.side-card span{color:#c4b5fd;font-style:italic;font-size:.8rem}
+/* cards: any bordered container */
+div[data-testid="stVerticalBlockBorderWrapper"]:has(> div > div[data-testid="stVerticalBlock"]){border-radius:18px}
+div[data-testid="stVerticalBlockBorderWrapper"]{background:var(--card);border:1px solid var(--line)!important;border-radius:18px;box-shadow:0 10px 40px rgba(5,2,25,.45);backdrop-filter:blur(6px)}
+/* hero */
+.hero{border:1px solid var(--line);border-radius:20px;padding:1.5rem 2rem;margin-bottom:1rem;background:radial-gradient(600px 200px at 90% 30%,rgba(192,38,211,.35),transparent 70%),radial-gradient(700px 260px at 10% 0%,rgba(99,102,241,.45),transparent 70%),linear-gradient(120deg,#160b45,#0c0730)}
+.hero h1{font-size:2.3rem;font-weight:800;margin:0;color:#fff}.hero h1 em{font-style:italic;background:linear-gradient(90deg,#a78bfa,#f0abfc);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p{margin:.4rem 0 .8rem;color:#d8d0ff;font-size:1.02rem}
+.hero .ticks span{display:inline-block;margin-right:1.1rem;font-size:.86rem;font-weight:600;color:#e9e4ff}.hero .ticks span:before{content:"\2713";display:inline-block;width:1.15rem;height:1.15rem;line-height:1.15rem;text-align:center;border-radius:50%;background:#16a34a;color:#fff;font-size:.7rem;margin-right:.4rem}
+/* headings, chips, tiles */
+.page-title{font-size:1.7rem;font-weight:800;color:#fff;margin:.2rem 0 0}.page-sub{color:var(--muted);margin-bottom:.9rem}
+.crumbs{color:var(--muted);font-size:.8rem;margin-bottom:.2rem}.crumbs b{color:#c4b5fd}
+.panel-title{display:flex;align-items:center;gap:.6rem;font-weight:700;font-size:1.12rem;color:#fff;margin-bottom:.4rem}
+.chip{display:inline-block;padding:.12rem .6rem;border-radius:99px;font-size:.72rem;font-weight:700;border:1px solid var(--line);background:rgba(139,92,246,.18);color:#ddd6fe}
+.chip.ok{color:#6ee7b7;background:rgba(16,185,129,.14);border-color:rgba(16,185,129,.4)}.chip.warn{color:#fcd34d;background:rgba(245,158,11,.13);border-color:rgba(245,158,11,.4)}.chip.err{color:#fca5a5;background:rgba(239,68,68,.13);border-color:rgba(239,68,68,.4)}
+.chip.gold{color:#fde68a;background:rgba(234,179,8,.15);border-color:rgba(234,179,8,.4)}
+.tile{border:1px solid var(--line);border-radius:14px;padding:.8rem 1rem;background:rgba(18,10,51,.7);text-align:center}
+.tile .v{font-size:1.45rem;font-weight:800;color:#fff}.tile .l{color:var(--muted);font-size:.78rem;margin-top:.1rem}
+.gpu-chip{display:inline-flex;align-items:center;gap:.5rem;font-weight:700;color:var(--ok);padding:.5rem .2rem}.gpu-chip i{width:.65rem;height:.65rem;border-radius:50%;background:var(--ok);box-shadow:0 0 10px var(--ok)}.gpu-chip.off{color:var(--warn)}.gpu-chip.off i{background:var(--warn);box-shadow:0 0 10px var(--warn)}
+.mod-card{border:1px solid var(--line);border-radius:16px;padding:1rem 1.1rem;background:linear-gradient(135deg,rgba(124,58,237,.22),rgba(14,8,44,.9));min-height:92px}
+.mod-card b{display:block;font-size:1.08rem;color:#fff}.mod-card span{color:var(--muted);font-size:.82rem}
+.arch{display:flex;flex-direction:column;gap:.5rem;align-items:center}.arch .row{display:flex;gap:.6rem;flex-wrap:wrap;justify-content:center}.arch .box{border:1px solid var(--line);border-radius:12px;padding:.55rem 1rem;background:rgba(124,58,237,.15);font-weight:600;font-size:.88rem}.arch .arrow{color:var(--accent)}
+/* inputs */
+.stTextArea textarea,.stTextInput input,.stNumberInput input,div[data-baseweb="select"]>div{background:rgba(10,5,35,.75)!important;border:1px solid var(--line)!important;border-radius:12px!important;color:var(--text)!important}
+.stTextArea textarea:focus,.stTextInput input:focus{border-color:var(--accent)!important;box-shadow:0 0 0 2px rgba(139,92,246,.3)!important}
+label,.stMarkdown p{color:var(--text)}
+/* buttons */
+.stButton>button,.stDownloadButton>button{border-radius:12px;border:1px solid var(--line);background:rgba(30,18,78,.8);color:var(--text);font-weight:600;transition:all .15s}
+.stButton>button:hover,.stDownloadButton>button:hover{border-color:var(--accent);color:#fff;background:rgba(124,58,237,.3)}
+.stButton>button[kind="primary"],.stDownloadButton>button[kind="primary"],button[kind="primaryFormSubmit"]{background:linear-gradient(90deg,#5b5bff,#a855f7 55%,#d946ef);border:none;color:#fff;font-weight:700;padding:.7rem 1rem;box-shadow:0 8px 28px rgba(168,85,247,.4)}
+.stButton>button:focus-visible,.stDownloadButton>button:focus-visible{outline:2px solid #f0abfc;outline-offset:2px}
+button[data-baseweb="tab"]{font-weight:600}
+div[data-testid="stMetric"]{background:rgba(18,10,51,.7);border:1px solid var(--line);border-radius:14px;padding:.7rem .9rem}
+div[data-testid="stImage"] img{border-radius:14px}
+.stProgress>div>div>div{background:linear-gradient(90deg,#6d4aff,#d946ef)}
+div[data-testid="stStatusWidget"]{display:none}
+@media (max-width:900px){.block-container{padding:.8rem}.hero h1{font-size:1.6rem}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+
+
+/* Quick-preset header: same look as before; labels never break, and the row drops under the title only when it cannot fit */
+.preset-label{padding-top:0;text-align:right;color:var(--muted);white-space:nowrap}
+.st-key-preset_head > [data-testid="stLayoutWrapper"] > [data-testid="stHorizontalBlock"]{flex-wrap:wrap;row-gap:.4rem}
+.st-key-preset_head > [data-testid="stLayoutWrapper"] > [data-testid="stHorizontalBlock"] > [data-testid="stColumn"]:first-child{flex:0 0 auto;width:auto;min-width:max-content}
+.st-key-preset_head > [data-testid="stLayoutWrapper"] > [data-testid="stHorizontalBlock"] > [data-testid="stColumn"]:last-child{flex:1 1 24rem;min-width:min(24rem,100%)}
+.st-key-preset_head [data-testid="stColumn"] [data-testid="stHorizontalBlock"]{flex-wrap:nowrap;gap:.4rem}
+.st-key-preset_head [data-testid="stColumn"] [data-testid="stColumn"]{min-width:0}
+.st-key-preset_head button{padding-left:.3rem;padding-right:.3rem}
+.st-key-preset_head button p{white-space:nowrap;overflow:visible;text-overflow:clip;font-size:.9rem}
+.panel-title{white-space:nowrap}
+
+/* Stat tiles: short values keep the normal big size; long ones (1024×1024, 10.3 GB) shrink to fit the box */
+.tile{container-type:inline-size;min-width:0;overflow:hidden;padding-left:.4rem;padding-right:.4rem}
+.tile .v{white-space:nowrap;height:2rem;display:flex;align-items:center;justify-content:center}
+.tile .v.long{font-size:clamp(.75rem,15cqw,1.3rem);overflow:hidden}
+/* labels stay on ONE line and scale down with the tile instead of wrapping or being cut off */
+.tile .l{white-space:nowrap;overflow:visible;font-size:clamp(.6rem,8.5cqw,.78rem)}
+
+/* st.metric values/labels (Settings, Evaluation, ...): never end in an ellipsis; shrink to fit on one line */
+div[data-testid="stMetric"]{container-type:inline-size;min-width:0}
+div[data-testid="stMetricLabel"],div[data-testid="stMetricLabel"] *{white-space:nowrap!important;overflow:visible!important;text-overflow:clip!important;font-size:clamp(.62rem,8.5cqw,.85rem)!important}
+div[data-testid="stMetricValue"],div[data-testid="stMetricValue"] *{white-space:nowrap!important;overflow:visible!important;text-overflow:clip!important;font-size:clamp(.8rem,13cqw,1.6rem)!important}
+
+/* Gallery cards: "Open" and "Cmp" stay on one line */
+[class*="st-key-gal_o_"] button p,[class*="st-key-gal_cmp_"] label p,[class*="st-key-gal_cmp_"] label{white-space:nowrap}
+[class*="st-key-gal_o_"] button{padding-left:.3rem;padding-right:.3rem}
+[class*="st-key-gal_f_"] button{padding-left:.3rem;padding-right:.3rem}
+[class*="st-key-gal_cmp_"] [data-testid="stTooltipIcon"]{margin-left:.1rem}
+[class*="st-key-gal_row_"] [data-testid="stHorizontalBlock"]{flex-wrap:wrap;gap:.4rem}
+[class*="st-key-gal_row_"] [data-testid="stColumn"]{flex:1 1 auto;min-width:max-content}
+[class*="st-key-gal_row_"] [data-testid="stColumn"]:nth-child(2){min-width:4.6rem}
+
+/* Image actions: every button label stays on one line; the row wraps instead */
+.st-key-act_row [data-testid="stHorizontalBlock"]{flex-wrap:wrap;gap:.5rem}
+.st-key-act_row [data-testid="stColumn"]{flex:1 1 auto;min-width:max-content;width:auto}
+.st-key-act_row button p,.st-key-act_row [data-testid="stPopover"] button p{white-space:nowrap}
+.st-key-act_row button{padding-left:.9rem;padding-right:.9rem}
+[class*="st-key-act_del_yes"] button p,[class*="st-key-act_del_no"] button p{white-space:nowrap}
+
+/* Notification bell: the count is a small red badge on the bell icon (like YouTube), not a separate line */
+.st-key-bell_wrap button{position:relative;overflow:visible;white-space:nowrap}
+.st-key-bell_wrap button::after{content:var(--bell-n,none);position:absolute;top:-.45rem;right:-.45rem;min-width:1.2rem;height:1.2rem;padding:0 .3rem;
+  border-radius:999px;background:#ff2d2d;color:#fff;font-size:.72rem;font-weight:700;line-height:1.2rem;text-align:center;box-sizing:border-box;box-shadow:0 0 0 2px #0b0620}
+.st-key-bell_wrap [data-testid="stMarkdown"],.st-key-bell_wrap [data-testid="stElementContainer"]:has(style){display:none}

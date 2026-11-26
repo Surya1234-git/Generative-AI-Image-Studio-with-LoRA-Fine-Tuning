@@ -1,0 +1,57 @@
+{
+  "generated_at": "2026-11-25 14:17:59",
+  "python": "3.13.16",
+  "platform": "Linux-6.6.159+-x86_64-with-glibc2.39",
+  "device": {
+    "name": "Tesla T4",
+    "total_gb": 14.56317138671875,
+    "torch_version": "2.14.1+cu130",
+    "cuda_version": "13.0",
+    "compute_capability": "7.5"
+  },
+  "packages": {
+    "torch": "2.14.1+cu130",
+    "torchvision": "0.29.1+cu130",
+    "diffusers": "0.42.1",
+    "transformers": "5.22.1",
+    "peft": "0.21.2",
+    "accelerate": "1.15.0",
+    "sentence-transformers": "5.7.0",
+    "streamlit": "1.49.1",
+    "plotly": "5.24.1",
+    "numpy": "2.4.6",
+    "pandas": "2.2.3",
+    "scikit-learn": "1.6.1",
+    "scikit-image": "0.25.2",
+    "Pillow": "11.3.0",
+    "torchmetrics": "1.9.0",
+    "lpips": "0.1.4",
+    "umap-learn": "0.5.12"
+  },
+  "model_repos": {
+    "Stable Diffusion 1.5": "stable-diffusion-v1-5/stable-diffusion-v1-5",
+    "Stable Diffusion XL Base 1.0": "stabilityai/stable-diffusion-xl-base-1.0"
+  },
+  "metric_methodology": {
+    "CLIPScore": "100 * max(cos(CLIP ViT-B/32 image embedding, CLIP text embedding), 0)",
+    "FID": "torchmetrics FrechetInceptionDistance, 2048-d Inception features; unreliable below 2048 images per set",
+    "classifier_accuracy": "small CNN trained on real images; generated images of class c are classified; accuracy = fraction labelled c",
+    "AUC/ROC": "one-vs-rest per class on the classifier's softmax probabilities; macro AUC = mean over classes",
+    "SSIM/PSNR": "only for corresponding image pairs (same content)",
+    "LPIPS": "AlexNet LPIPS on 256x256 resized pairs"
+  },
+  "experiment": {
+    "experiments": [
+      10,
+      9,
+      8,
+      7,
+      6,
+      5,
+      4,
+      3,
+      2,
+      1
+    ]
+  }
+}
